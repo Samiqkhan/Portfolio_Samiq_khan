@@ -88,7 +88,7 @@ const About = () => {
                         {/* Download Resume Button */}
                         <div className="mt-10 text-center">
                             <motion.a
-                                href="images/RESUME.pdf" // Make sure this path is correct
+                                href="/RESUME.pdf" // Make sure this path is correct
                                 download
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
