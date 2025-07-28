@@ -83,7 +83,7 @@ const FloatingElements = () => (
 
 // --- SKILLS DATA & STYLES ---
 const skillCategories = [
-    { title: "Technical Languages", icon: <CodeIcon />, color: "blue", skills: [ "Core of Java", "HTML", "SQL","JS", "CSS","React", "Next.js"] },
+    { title: "Technical Languages", icon: <CodeIcon />, color: "blue", skills: [ "Core Java", "HTML", "SQL","JS", "CSS","React", "Next.js"] },
     { title: "Design & UI/UX", icon: <PaletteIcon />, color: "purple", skills: ["Figma", "Canva", "Wix", "Blender", "AutoCAD"] },
     { title: "Other Tools & Technologies", icon: <BrainIcon />, color: "orange", skills: ["Firebase", "Lidar", "Git & GitHub", "Power BI", "Tableau", "UI path" ] },
 ];
