@@ -88,7 +88,7 @@ const projectsData = [
     {
         title: "RPA Attendance Automation",
         description: `Reads Excel attendance data and sends personalized emails automatically.`,
-        image: "/attendance.svg",
+        image: "/attendance.png",
         tags: ["RPA", "Excel"],
     },
     {
