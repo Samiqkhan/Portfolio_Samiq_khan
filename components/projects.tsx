@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Image from "next/image"; // Import the Next.js Image component
 
 // --- INLINE SVG ICONS ---
 // Replaced lucide-react for better performance and fewer dependencies.
@@ -86,7 +87,6 @@ const projectsData = [
     },
     {
         title: "RPA Attendance Automation",
-        // FIX: Used backticks (`) for the multiline string.
         description: `Reads Excel attendance data and sends personalized emails automatically.`,
         image: "/attendance.png",
         tags: ["RPA", "Excel"],
@@ -151,7 +151,6 @@ const Projects = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    // UPDATED: Changed grid to be 2 columns on mobile, 3 on large screens. Adjusted gap.
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8"
                 >
                     {projectsData.map((project) => (
@@ -162,14 +161,21 @@ const Projects = () => {
                             className="group bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-purple-500/50 transition-colors duration-300"
                         >
                             <div className="relative overflow-hidden">
-                                <motion.img
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-36 sm:h-48 object-cover" // Adjusted height for smaller cards
+                                {/* UPDATE: Replaced motion.img with Next/Image wrapped in motion.div to keep animations */}
+                                <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.3 }}
-                                    onError={(e) => { e.currentTarget.src = 'https://placehold.co/400x300/1e293b/94a3b8?text=Image+Not+Found'; }}
-                                />
+                                >
+                                    <Image
+                                        src={project.image}
+                                        alt={project.title}
+                                        width={400}  // Required for Next/Image
+                                        height={300} // Required for Next/Image
+                                        className="w-full h-36 sm:h-48 object-cover"
+                                        // The onError fallback is not directly supported, but Next.js handles missing images gracefully.
+                                        // For a custom fallback, you would need a more complex setup.
+                                    />
+                                </motion.div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent transition-opacity duration-300 opacity-0 group-hover:opacity-100" />
                                 
                                 {(project.liveUrl || project.githubUrl) && (
