@@ -150,21 +150,21 @@ const Projects = () => {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                    // UPDATED: Changed grid to be 2 columns on mobile, 3 on large screens. Adjusted gap.
+                    className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8"
                 >
                     {projectsData.map((project) => (
                         <motion.div
                             key={project.title}
                             variants={itemVariants}
                             whileHover={{ y: -5, transition: { type: "spring", stiffness: 300 } }}
-                            // PERFORMANCE OPTIMIZATION: Replaced `backdrop-blur` with a solid, semi-transparent background.
                             className="group bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-700/50 hover:border-purple-500/50 transition-colors duration-300"
                         >
                             <div className="relative overflow-hidden">
                                 <motion.img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-48 object-cover"
+                                    className="w-full h-36 sm:h-48 object-cover" // Adjusted height for smaller cards
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.3 }}
                                     onError={(e) => { e.currentTarget.src = 'https://placehold.co/400x300/1e293b/94a3b8?text=Image+Not+Found'; }}
@@ -187,16 +187,16 @@ const Projects = () => {
                                 )}
                             </div>
 
-                            <div className="p-6">
-                                <h3 className="text-lg font-bold text-slate-100 mb-2 group-hover:text-purple-400 transition-colors duration-300">
+                            <div className="p-4">
+                                <h3 className="text-base sm:text-lg font-bold text-slate-100 mb-2 group-hover:text-purple-400 transition-colors duration-300">
                                     {project.title}
                                 </h3>
-                                <p className="text-slate-400 text-sm leading-relaxed mb-4">
+                                <p className="text-slate-400 text-xs sm:text-sm leading-relaxed mb-4">
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.tags.map((tag) => (
-                                        <span key={tag} className="px-3 py-1 text-xs bg-slate-700 text-purple-300 rounded-full">
+                                        <span key={tag} className="px-2 py-1 text-[10px] sm:text-xs bg-slate-700 text-purple-300 rounded-full">
                                             {tag}
                                         </span>
                                     ))}
