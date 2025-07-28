@@ -88,7 +88,7 @@ const projectsData = [
         title: "RPA Attendance Automation",
         // FIX: Used backticks (`) for the multiline string.
         description: `Reads Excel attendance data and sends personalized emails automatically.`,
-        image: "/attendance.png",
+        image: "/attendance.svg",
         tags: ["RPA", "Excel"],
     },
     {
