@@ -52,7 +52,7 @@ const Hero = () => {
   const socialLinks = [
     { href: "https://github.com/Samiqkhan", icon: <Github size={24} /> },
     {
-      href: "https://linkedin.com/in/your-profile",
+      href: "https://www.linkedin.com/in/mohammed-samiq-khan-r/",
       icon: <Linkedin size={24} />,
     },
   ];
