@@ -86,7 +86,8 @@ const projectsData = [
     },
     {
         title: "RPA Attendance Automation",
-        description: "Reads Excel attendance data and sends personalized emails automatically.
+        // FIX: Used backticks (`) for the multiline string.
+        description: `Reads Excel attendance data and sends personalized emails automatically.`,
         image: "/attendance.png",
         tags: ["RPA", "Excel"],
     },
@@ -151,7 +152,7 @@ const Projects = () => {
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     // UPDATED: Changed grid to be 2 columns on mobile, 3 on large screens. Adjusted gap.
-                    className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8"
                 >
                     {projectsData.map((project) => (
                         <motion.div
