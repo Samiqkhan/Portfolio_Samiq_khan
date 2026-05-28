@@ -17,10 +17,10 @@ const Header = () => {
     const navItems = [
         { href: "#home", label: "Home" },
         { href: "#about", label: "About" },
-        { href: "#skills", label: "Skills" },
         { href: "#projects", label: "Projects" },
         { href: "#education", label: "Education" },
         { href: "#experience", label: "Experience" },
+        { href: "#skills", label: "Skills" },
         { href: "#contact", label: "Contact" },
     ];
 
@@ -81,7 +81,7 @@ const Header = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <h1 className="text-xl lg:text-2xl font-bold tracking-tight text-white">
-                            Mohammed <span className="text-purple-400">SK</span>
+                            Mohammed <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-400 font-extrabold">SK</span>
                         </h1>
                     </div>
 

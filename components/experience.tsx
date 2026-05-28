@@ -93,6 +93,15 @@ const experienceData = [
         status: "current",
     },
     {
+        year: "Feb 2026 - Apr 2026",
+        title: "Python Developer Intern",
+        company: "Mphasis",
+        location: "Pune - Chennai, India",
+        description: "Contributed to backend systems development, automated ETL scripts, and code optimization tasks. Maintained reliable Python services and data streams.",
+        skills: ["Python", "SQL", "Automation", "Software Engineering"],
+        status: "completed",
+    },
+    {
         year: "July 2023",
         title: "Full Stack Web Development Intern",
         company: "Stack Queue Education",
