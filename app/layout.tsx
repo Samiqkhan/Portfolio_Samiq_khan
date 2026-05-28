@@ -3,8 +3,8 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Samiq portfolio',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  description: 'Representation of my skills and projects',
+  generator: 'react, next.js, tailwindcss',
 }
 
 export default function RootLayout({
